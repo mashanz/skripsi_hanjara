@@ -6,3 +6,5 @@
 *.toc
 *.gz
 *.out
+.gitignore
+.gitattributes
