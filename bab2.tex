@@ -8,7 +8,27 @@ Membuat desain sebuah perangkat ic membutuhkan proses yang panjang dan sumberday
 \todo{isi perkembangan LSI sesua renesas web}
 
 \subsection{Kemungkinan Serangan Desain LSI}
-\todo{dari paper dan buku jelasin gimana kemungkinan serangan}
+Terdapat banyak kemungkinan serangan dalam proses manufakturing desain LSI. Berikut beberapa contoh serangan terhadap LSI desain.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.05\textwidth]
+	{diagrams/untrustSource.png}
+	\caption{Clonning/Sumber Tidak Terpercaya}
+	\label{fig:untrustsource}
+\end{figure}
+
+Dalam segi ini serangan dilakukan dengan cara mencuri langsung desain yang sudah siap di fabrikasi serta uji coba kebenaran. Bila pencuri mendapatkan desain yang telah di uji coba, maka pencuri tinggal langsung memperbanyak desain yang telah di curi.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.05\textwidth]
+	{diagrams/reverseEngineering.png}
+	\caption{RE (Reverse Engineering)}
+	\label{fig:reverseengineering}
+\end{figure}
+
+Untuk serangan jenis ini, pencuri sudah pendapatkan produk dari pasar yang telah teruji, pencuri tinggal melakukan scan rangkaian kemudian mengujinya dengan datasheet. Apabila hasil scan desain produk di dapati rangkaian yang konkrit/jelas dan rangkaian tersebut telah teruji sesuai datasheet. Maka pencuri tinggal melakukan fabrikasi.
 
 \subsection{Mengatasi Serangan terhadap Desain LSI}
 \todo{jelasin dari buku dan paper gimana cara mengatasinya}
