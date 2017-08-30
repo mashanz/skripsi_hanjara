@@ -1,17 +1,71 @@
 \chapter{\babDua}
-Membuat desain sebuah perangkat ic membutuhkan proses yang panjang dan sumberdaya manusia yang banyak, serta tingkat ketelitian yang tinggi. Oleh karenanya di butuhkan biaya yang tidak kecil dan waktu yang cukup lama hanya untuk membuat sebuah desain IC. Dengan kerumitan yang tinggi serta waktu yang lama dalam setiap prosesnya kadang pihak yang tak bertanggung jawab melakukan kecurangna dengan mecuri desain untuk memotong waktu dan biaya yang di butuhkan utuk produksi. sehingga menjadi masalah dalam dunia permanufakturan ic.
+Membuat desain sebuah perangkat IC membutuhkan proses yang panjang dan sumberdaya manusia yang banyak, serta tingkat ketelitian yang tinggi. Oleh karenanya di butuhkan biaya yang tidak kecil dan waktu yang cukup lama hanya untuk membuat sebuah desain IC. Dengan kerumitan yang tinggi serta waktu yang lama dalam setiap prosesnya kadang pihak yang tak bertanggung jawab melakukan kecurangna dengan mecuri desain untuk memotong waktu dan biaya yang di butuhkan utuk produksi. sehingga menjadi masalah dalam dunia permanufakturan ic. \cite{Azriel2017, Basak2017, Bidmeshki2017, Chen2017, Chen2017a, Dellosa2017, Guo2017, Jin2017, Lin2017, Matters2017, Matters2017a, Mohanty2017, Mohanty2017a, Ngo2017, Ngo2017a, Of2017, Sengupta2017a, Sengupta2017b, Sengupta2017, Tsai2017, Veeranna2017, Wehlack2017, Yasin2017, Zhang2017a, Zhang2017, Zhang2017b}
 
-\section{Large Scale Integration}
-\textit{Large Scale Integration} atau disingkat LSI merupakan teknologi desain IC dengan kepadatan gate sekitar xx gate. pada awalnya blablabal...
+\section{Very Large Scale Integration}
+\textit{Very Large Scale Integration} atau disingkat LSI merupakan proses pembuatan sebuah IC dengan mengkombinasikan ribuan transistor ke dalam sebuah chip. VLSI ada sejak tahun 1970-an ketika semikonduktor kompleks dan teknologi komunikasi sedang berkembang. Mikroprosesor merupakan salah satu peraangkat VLSI. Sebelum adanya teknologi VLSI kebanyakan IC memiliki set fungsi yang terbatas yang dapat di jalankan. Sebuah perangkat chip elektronik dahulu hanya fokus pada sebuah fungsi seperti CPU, ROM, RAM dan rangkaian logika lainnya. Dengan adanya VLSI memungkinkan disainer IC untuk menambahkan berbagai fungsi kedalam sebuah chip IC. \cite{vlsi.hist} 
 
-\section{Arus Pengembangan LSI}
-\todo{isi perkembangan LSI sesua renesas web}
+\subsection{Arus Pengembangan LSI}
+Integrated Circuit (IC) merupakan teknologi sirkuit elektronika yang lebih maju. Sebuah rangkaian elektronika dibuat dari berbagai komponen elektronika yang berbeda beda seperti transistor, resistor, kapasitor dan dioda yang saling tersambung satu sama lain. \cite{vlsi.hist}
 
-\section{Kemungkinan Serangan Desain LSI}
-\todo{dari paper dan buku jelasin gimana kemungkinan serangan}
+Transistor merupakan komponen terpenting pada pengembangan teknologi komputer moderen. Sebelum ditemukannya transistor. Para Engineer harus menggunakan tabing vakum. Layaknya seperti transistor, tabung vakum dapat bekerja sebaga saklar elektrik. Namun tabung vakum membutuhkan daya dan ruang yang besar, mahal, serta kemampuan eksekusi yang lambat membuat tabung vakum tergantikan oleh transistor.
 
-\section{Mengatasi Serangan terhadap Desain LSI}
-\todo{jelasin dari buku dan paper gimana cara mengatasinya}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]
+	{pics/steping.png}
+	\caption{Produksi Chip Moderen}
+	\label{fig:produksiChipModeren}
+\end{figure}
 
-\section{Cara yang Diajukan Penulis}
-\todo{Jelasin yg gue kerjain, terus kasih kelebihannya, agak mikir sih, but its simple may be}
+\subsection{Kemungkinan Serangan Desain LSI}
+Terdapat banyak kemungkinan serangan dalam proses manufakturing desain LSI. Berikut beberapa contoh serangan terhadap LSI desain.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.05\textwidth]
+	{diagrams/untrustSource.png}
+	\caption{Clonning/Sumber Tidak Terpercaya}
+	\label{fig:untrustsource}
+\end{figure}
+
+Dalam segi ini serangan dilakukan dengan cara mencuri langsung desain yang sudah siap di fabrikasi serta uji coba kebenaran. Bila pencuri mendapatkan desain yang telah di uji coba, maka pencuri tinggal langsung memperbanyak desain yang telah di curi.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.05\textwidth]
+	{diagrams/reverseEngineering.png}
+	\caption{RE (Reverse Engineering)}
+	\label{fig:reverseengineering}
+\end{figure}
+
+Untuk serangan jenis ini, pencuri sudah pendapatkan produk dari pasar yang telah teruji, pencuri tinggal melakukan scan rangkaian kemudian mengujinya dengan datasheet. Apabila hasil scan desain produk di dapati rangkaian yang konkrit/jelas dan rangkaian tersebut telah teruji sesuai datasheet. Maka pencuri tinggal melakukan fabrikasi.
+
+\subsection{Mengatasi Serangan terhadap Desain LSI}
+Dengan meninjau kemungkinan dari tipe serangan, terdapat berbagai cara untuk mengatasi setiap serangan serangan tersebut. Dari reverse engineering hingga untrust source. untuk reverse enginering digunakan teknik anti reverse engineering dan untuk untrust source digunakan teknik identifier dan dengan enclosure agreement law.
+
+\section{Teknik Proteksi}
+Dari berbagai teknik yang telah digunakan, penulis melakukan penggabungan 2 teknik pengamanan dalam sebuah desain IC. Dalam penelitian ini dilakukan penggabungan 2 teknik agar cakupan wilayah keamanan sebuah IC semakin luas. Berikut teknik yang digabungkan dalam penelitian kali ini.
+
+\subsection{DSP (Digital Signal Processing)}
+DSP merupakan teknik pengolahan sinyal untuk sinyal digital.
+
+\subsection{Polimorphisme}
+Polimorphisme merupakan teknik pengecoh yang di gunakan dalam perlindungan desain IC. 
+
+\section{Peralatan dan Teknologi}
+Dalam penelitian kali ini dibutuhkan beberapa peralatan dan standard teknologi untuk mengembangkan teknik perlindungan intelektual properti. Sebagai penunjang dalam pembuatan perlindungan, penulis menggunakan tools dan teknologi yang umum digunakan dalam proses pengembangan desain LSI.
+
+\subsection{Verilog HDL}
+Verilog HDL merupakan bahasa pendeskripsi hardware yang di rancang untuk mendeskripsikan suatu rancangan perangkat keras pada gate-lavel dalam bentuk bahasa manusia *walaupun enggak begitu manusiawi
+
+\subsection{YOSYS}
+YOSYS adalaha...
+
+\subsection{FPGA Elbert V2 Board}
+FPGA merupakan kepanjangan dari Field Programmable Gate Array adalah perangkat keras yang biasa digunakan dalam proses manufakturing IC. FPGA digunakan untuk mensimulasikan draft rancangan IC yang siap untuk di test yang apabila telah lolos test akan di lanjutkan ke tahap layout. FPGA hanya digunakan apabila rancangan membutuhkan input dari perangkat lain atau program kernel.
+
+\section{Target IP Core}
+Watermark adalah rangkaian yang tidak dapat berdiri sendiri pada implementasinya walaupun dalam pengembangannya bisa di lakukan mandiri. Watermark dalam bentuk data signature.
+
+\subsection{ALU (Aritmatic Logic Unit)}
+Aritmatik Logic Unit atau dapat di singkat sebagai ALU merupakan salah satu komponen utama dalam prosesor. ALU berfungsi sebagai Unit yang melakukan kalkulasi logika artimatika.
