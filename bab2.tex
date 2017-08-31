@@ -7,15 +7,23 @@ Membuat desain sebuah perangkat IC membutuhkan proses yang panjang dan sumberday
 \subsection{Arus Pengembangan LSI}
 Integrated Circuit (IC) merupakan teknologi sirkuit elektronika yang lebih maju. Sebuah rangkaian elektronika dibuat dari berbagai komponen elektronika yang berbeda beda seperti transistor, resistor, kapasitor dan dioda yang saling tersambung satu sama lain. \cite{vlsi.hist}
 
-Transistor merupakan komponen terpenting pada pengembangan teknologi komputer moderen. Sebelum ditemukannya transistor. Para Engineer harus menggunakan tabing vakum. Layaknya seperti transistor, tabung vakum dapat bekerja sebaga saklar elektrik. Namun tabung vakum membutuhkan daya dan ruang yang besar, mahal, serta kemampuan eksekusi yang lambat membuat tabung vakum tergantikan oleh transistor.
+Transistor merupakan komponen terpenting pada pengembangan teknologi komputer moderen. Sebelum ditemukannya transistor. Para Engineer harus menggunakan tabung vakum. Tabung vakum dapat bekerja sebagai saklar elektronik. Namun tabung vakum membutuhkan daya dan ruang yang besar, mahal, serta kemampuan eksekusi yang lambat membuat tabung vakum tergantikan oleh transistor.
+
+Dengan ditemukannya transistor yang ukuran dan kebutuhan dayanya yang kecil namun tetap efektif, Para Engineer elektronik di tahun 1950an melihat banyak sekali kemungkinan untuk implementasinya pada rangkaian elektronik yang lebih maju. Dengan semakin meningkatnya kompleksitas pada rangkaian elektronik munculah masalah-masalah baru.
+
+Salah satunya adalah ukuran rangkaian. Sebuah rangkaian kompleks seperti komputer sangat bergantung pada kecepatan. Apabila jumlah komponen pada komputer terlalu banyak maka sambungan antar komponen juga semakin banyak dan semakin panjang, sehingga menyebabkan kecepatan transfer sinyal listrik menjadi berkurang yang menyebabkan proses pada komputer menjadi lambat.
+
+Tahun 1958 masalah ini dapat dipecahkan oleh ide Jack S Kilby yang idenya adalah merangkai komponen elektronika dalam sebuah blok silikon. Idenya tersebut tidak hanya mengurangi ukuran rangkaian namun juga mengurangi kebutuhan kabel sambungan antar rangkaian. Akan tetapi idenya tersebut memiliki masalah lain, yaitu sulit untuk di implementasikan pada skala industri. Walaupun begitu, idenya tersebut mendapatkan penghargaan nobel di tahun 2000.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.4\textwidth]
+	\includegraphics[width=0.35\textwidth]
 	{pics/steping.png}
 	\caption{Produksi Chip Moderen}
 	\label{fig:produksiChipModeren}
 \end{figure}
+
+
 
 \subsection{Kemungkinan Serangan Desain LSI}
 Terdapat banyak kemungkinan serangan dalam proses manufakturing desain LSI. Berikut beberapa contoh serangan terhadap LSI desain.
@@ -42,6 +50,22 @@ Untuk serangan jenis ini, pencuri sudah pendapatkan produk dari pasar yang telah
 
 \subsection{Mengatasi Serangan terhadap Desain LSI}
 Dengan meninjau kemungkinan dari tipe serangan, terdapat berbagai cara untuk mengatasi setiap serangan serangan tersebut. Dari reverse engineering hingga untrust source. untuk reverse enginering digunakan teknik anti reverse engineering dan untuk untrust source digunakan teknik identifier dan dengan enclosure agreement law.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]
+	{diagrams/oldBusinessLSI.png}
+	\caption{Model Bisnis Lama}
+	\label{fig:oldbiss}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]
+	{diagrams/newBusinessLSI.png}
+	\caption{Model Bisnis Baru}
+	\label{fig:newbiss}
+\end{figure}
 
 \section{Teknik Proteksi}
 Dari berbagai teknik yang telah digunakan, penulis melakukan penggabungan 2 teknik pengamanan dalam sebuah desain IC. Dalam penelitian ini dilakukan penggabungan 2 teknik agar cakupan wilayah keamanan sebuah IC semakin luas. Berikut teknik yang digabungkan dalam penelitian kali ini.
