@@ -1,27 +1,34 @@
 \chapter{\babTiga}
-\todo{tambahkan kata-kata pengantar bab 1 disini}
+Perancangan serta langkah-langkah di perlukan untuk menyelesaikan penelitian ini. Berikut ini akan di jelaskan gambaran serta tahapan dari perancangan system yang di teliti serta skenario simulasi dari hasil desain yang telah dirancang.
 
 \section{Desain}
-\todo{jelasin desainmu di sini secara detail}
+Secara garis besar pada sisi desainer, terdapat 3 langkah untuk melakukan pengembangan alat dari programming hingga layout siap cetak. Penulis menggunakan cara ini dari hasil studi serta eksperimen saat proses pengembangan alat.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]
+	\includegraphics[width=0.3\textwidth]
 	{diagrams/All_General.png}
-	\caption{Arsitektur watermark}
+	\caption{Skema Perancangan Umum Proses Desain}
 	\label{fig:Allgeneral}
 \end{figure}
+
+Pada langkah pertama dilakukan proses A, penulis melakukan perancangan desain dari IC yang akan di watermark kemudian di lakukan analisis. Apabila pertama telah selesai, penulis akan melakukan langkah kedua. Pada langkah kedua ini di lakukan kegiatan B yaitu proses ferifikasi dengan FPGA dan kegiatan C yaitu proses syntesys menjadi Raw Layout. Setelah kegiatan B dan C selesai maka kegiatan D yaitu proses finalisasi layout dapat dilakukan yang akhirnya hasil final layout dapat di serahkan ke pabrik untuk di fabrikasi.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=1.08\textwidth]
 	{diagrams/All.png}
-	\caption{Arsitektur watermark}
+	\caption{Skema Perancangan dari Sub Proses Desain}
 	\label{fig:All}
 \end{figure}
 
-\subsection{Gambaran Umum}
-\todo{isi sendiri}
+Secara umum pada kegiatan A, penulis membuat 3 module verilog untuk digabungkan. Core Module yaitu program rangkaian ALU, Watermark Module adalah program untuk watermarking dan Bridge Module untuk menghubungkan output antara Core Module dan Watermark Module. Setelah selesai dilakukan programming setiap medule tersebut maka medul-modul tadi digabungkan menjadi Top Module. Top Module ini lah yang nantinya akan menjadi IC terwatermark. 
+
+Pada top module ini harus diberikan program tambahan yaitu stimulus untuk dapat mensimulasikan skenario Input dan Output dari Top Module. Bila sekenario stimulus telah dibuat, kemudian dilakukan simulasi dengan bantuan softwere ISE design suit untuk melihat hasil simulasi berupa Timming diagram. Pada Timming Diagram inilah dapat di lihat apakah sekenario dari Input dan Output sesuai dengan keinginan.
+
+
+
+\subsection{Skema Perlindungan}
 
 \begin{figure}
 	\centering
@@ -36,7 +43,7 @@
 	\includegraphics[width=0.7\textwidth]
 	{diagrams/Activation.png}
 	\caption{Aktifasi}
-	\label{fig:arsitekturoff}
+	\label{fig:aktifasi}
 \end{figure}
 
 \begin{figure}
