@@ -15139,7 +15139,7 @@
 									"containerExtending": false,
 									"left": 26,
 									"top": 970,
-									"width": 782.18994140625,
+									"width": 781,
 									"height": 13,
 									"autoResize": false,
 									"underline": false,
@@ -15160,7 +15160,7 @@
 							"containerExtending": false,
 							"left": 16,
 							"top": 960,
-							"width": 802.18994140625,
+							"width": 801,
 							"height": 33,
 							"autoResize": false,
 							"nameLabel": {
