@@ -61,6 +61,8 @@ Dengan meninjau kemungkinan dari tipe serangan, terdapat berbagai cara untuk men
 	\label{fig:oldbiss}
 \end{figure}
 
+Pada model gambar diatas, kegiatan desain, fabrikasi dan deliveri di lakukan oleh satu pihak yang sama. Proses pembuatan suatu perangkat IC dimonopoli oleh 1 perusahaan. Sehingga kemungkinan serangan hanya ada di antara pihak A dan Pihak B.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]
@@ -69,13 +71,17 @@ Dengan meninjau kemungkinan dari tipe serangan, terdapat berbagai cara untuk men
 	\label{fig:newbiss}
 \end{figure}
 
+Namun seiring dengan perkembangnya jaman. Monopoli proses dari desain, fabrikasi hingga deliveri mulai sulit di terapkan. Karena dengan semakin berkembangnya jaman dan deman akan fitur desain semakin tinggi, otomatis biaya semakin tinggi dan kompleksitas suatu desain semakin rumit serta waktu untuk menyelesaikan suatu desain semakin lama.
+
+Oleh karena itu sekarang mulai diterapkan Fabless manufakturing atau joint venture untuk membuat suat perangkat elektronika. Setidaknya pada proses bisnis ini terdapat 4 pihak. Pihak A dari keinginan pasar, pihak B yang melakukan perancangan desain, pihak C yang elakukan fabrikasi hasil rancangan pihak B dan Pihak D yang melakukan deliveri hasil fabrikasi di pihak C ke A.
+
 \section{Teknik Proteksi}
 Dari berbagai teknik yang telah digunakan, penulis melakukan penggabungan 2 teknik pengamanan dalam sebuah desain IC. Dalam penelitian ini dilakukan penggabungan 2 teknik agar cakupan wilayah keamanan sebuah IC semakin luas. Berikut teknik yang digabungkan dalam penelitian kali ini.
 
 \subsection{DSP (Digital Signal Processing) Filter}
 DSP merupakan teknik pengolahan sinyal untuk sinyal digital.
 
-\subsection{Polimorphisme}
+\subsection{Polimorphisme Gate}
 Polimorphisme merupakan teknik pengecoh yang di gunakan dalam perlindungan desain IC. 
 
 \begin{figure}
@@ -94,6 +100,16 @@ Verilog HDL merupakan bahasa pendeskripsi hardware yang di rancang untuk mendesk
 
 \subsection{YOSYS}
 YOSYS adalaha...
+
+\subsection{Electric VLSI}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]
+	{pics/electricvlsi.png}
+	\caption{Tampilan Electric VLSI}
+	\label{fig:vlsi}
+\end{figure}
 
 \subsection{FPGA Elbert V2 Board}
 FPGA merupakan kepanjangan dari Field Programmable Gate Array adalah perangkat keras yang biasa digunakan dalam proses manufakturing IC. FPGA digunakan untuk mensimulasikan draft rancangan IC yang siap untuk di test yang apabila telah lolos test akan di lanjutkan ke tahap layout. FPGA hanya digunakan apabila rancangan membutuhkan input dari perangkat lain atau program kernel.
