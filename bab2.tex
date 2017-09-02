@@ -96,10 +96,38 @@ Polimorphisme merupakan teknik pengecoh yang di gunakan dalam perlindungan desai
 Dalam penelitian kali ini dibutuhkan beberapa peralatan dan standard teknologi untuk mengembangkan teknik perlindungan intelektual properti. Sebagai penunjang dalam pembuatan perlindungan, penulis menggunakan tools dan teknologi yang umum digunakan dalam proses pengembangan desain LSI.
 
 \subsection{Verilog HDL}
-Verilog HDL merupakan bahasa pendeskripsi hardware yang di rancang untuk mendeskripsikan suatu rancangan perangkat keras pada gate-lavel dalam bentuk bahasa manusia *walaupun enggak begitu manusiawi
+Verilog HDL merupakan bahasa pendeskripsi hardware yang digunakan untuk mendesain dan dokumentasi sistem elektronika. Verilog HDL memungkinkan perancang mendesain pada berbagai tingkatan abstraksi.
 
-\subsection{YOSYS}
-YOSYS adalaha...
+Verilog HDL berasal dari Automated Integrated Design System (yang kemudian berubah nama menjadi Gateway Design Automation) pada tahun 1985. Saat itu perusahaan tersebut dipegang oleh Dr. Prabhu Goel, pendiri PODEM test generation algorithm. Verilog HDL di desain oleh Phil Moorby, yang kemudian menjadi chief Designer untuk Verilog-XL dan perusahaan rekan pertama di Cadance Design System. 
+
+Awalnya Verilog dibuat sebagai bahasa simulasi. Kemudian setelah berkembang tidak hanya digunakan untuk simulasi namun juga untuk sintesis. (source www.verilog.com)
+
+\subsection{Python}
+Python merupakan High-Level Programming Language yang banyak digunakan untuk general purpose programming, di buat oleh Guido van Rossum dan pertamakali rilis pada tahun 1991. Sebuah pahasa Interpretasi, Python memiliki filosofi disain yang meng emphasis code readibility, dan sintax yang memungkinkan programmer mengekspresikan konsep pada beberapa line of code dari pada yang digunakan pada bahasa lain seperti C++ atau Java. (source Kuhlman, Dave. "A Python Book: Beginning Python, Advanced Python, and Python Exercises"... Summerfield, Mark. Rapid GUI Programming with Python and Qt. Python is a very expressive language, which means that we can usually write far fewer lines of Python code than would be required for an equivalent application written in, say, C++ or Java)
+
+Python memiliki fitur sistem tipe dinamis dan memori manajemen otomatis serta mendukung multiple paradigma programming, termasuk Objek-orientasi, Imperative, Functional program, dan prosedural style. Bahasa ini juga memiliki banyak librari standard yang komperhensif. (source "About Python". Python Software Foundation. Retrieved 24 April 2012., second section "Fans of Python use the phrase "batteries included" to describe the standard library, which covers everything from asynchronous processing to zip files.")
+
+Python interpraters tersedia pada berbagai macam platform sistem operasi, memungkinkan kode Python berjalan pada berbagai macam sistem. (source "History and License". Retrieved 5 December 2016. "All Python releases are Open Source")
+
+\subsection{Yosys Open SYnthesis Suite}
+Yosys adalah sebuah framework untuk sintesis Verilog RTL. Sekarang ini memiliki suport yang extensif pada Verilog-2005 dan mendukun berbagai set basik algoritma sintesis untuk berbagai domain aplikasi.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]
+	{pics/yosys.png}
+	\caption{Perbedaan Tinkatan Abstraksi dan Sintesis Yosys}
+	\label{yosys}
+\end{figure}
+
+\subsection{Liberty Timing File (.lib)}
+Liberty adalah
+
+\subsection{Electric's native file format (.jelib)}
+Liberty adalah
+
+\subsection{Graphic Database System (.gds)}
+Graphic Data System merupakan format file database yang menyimpan informasi grafis. Format file ini sering digunakan sebagai penyimpanan layout IC yang siap di fabrikasi.
 
 \subsection{Electric VLSI}
 
@@ -109,6 +137,17 @@ YOSYS adalaha...
 	{pics/electricvlsi.png}
 	\caption{Tampilan Electric VLSI}
 	\label{fig:vlsi}
+\end{figure}
+
+\subsection{Xilinx ISE Design Suit}
+Xilinx ISE Design Suit merupakan Computer Aided Design (CAD) keluaran Xilinx yang digunakan untuk developing IC.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]
+	{pics/ise-logo.jpg}
+	\caption{Logo Xilinx ISE Design Suit}
+	\label{ise}
 \end{figure}
 
 \subsection{FPGA Elbert V2 Board}
@@ -124,8 +163,11 @@ FPGA merupakan kepanjangan dari Field Programmable Gate Array adalah perangkat k
 
 Elbert V2 merupakan Board yang simple namun serbaguna untuk pembelajaran atau pengembangan. Board ini menggunakan Xilinx Spartan 3A FPGA. Pada Development Board ini memiliki fitur FPGA dari Xilinx XC3S50A dengan 144 pin dengan maksimum 108 user IO. Dilengkapi dengan antarmuka USB2 untuk kemudahan konfigurasi ke SPI flash. 
 
+\subsection{Mikrokontroler}
+Mikrokontroler adalah sebuah perangkat chip elktronika yang berfungsi sebagai kontroler. Di dalam perangkat mikrokontroler setidaknya terdapat ALU, Memory, IO.
+
 \section{Target IP Core}
-Watermark adalah rangkaian yang tidak dapat berdiri sendiri pada implementasinya walaupun dalam pengembangannya bisa di lakukan mandiri. Watermark dalam bentuk data signature.
+Watermark adalah rangkaian yang tidak boleh berdiri sendiri pada implementasinya walaupun dalam pengembangannya bisa di lakukan mandiri. Dalam penelitian kali ini Module yang akan di watermark adalah modul ALU.
 
 \subsection{ALU (Aritmatic Logic Unit)}
 Aritmatik Logic Unit atau dapat di singkat sebagai ALU merupakan salah satu komponen utama dalam prosesor. ALU berfungsi sebagai Unit yang melakukan kalkulasi logika artimatika.
