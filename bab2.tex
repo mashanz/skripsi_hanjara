@@ -28,7 +28,7 @@ Setengah tahun setelah Kilby mencetuskan idenya tentang rangkaian Monolithic. Ro
 Chip pada zaman sekarang berbasis pada photolithography. Pada teknik ini digunakan radiasi sinar Ultra Violet yang melewati sebuah mask menuju lembaran silikon yang di lapisi filem photosensitive untuk membentuk suatu rangkaian.
 
 \subsection{Kemungkinan Serangan Desain LSI}
-Terdapat banyak kemungkinan serangan dalam proses manufakturing desain LSI. Berikut beberapa contoh serangan terhadap LSI desain.
+Dilihat dari proses developing, terdapat 2 cara untuk mendapatkan sebuah desain untuk di kloning. Pertama dengan mengambil langsung data mentah desain atau "blueprint" dan Reverse Engineering saat barang telah dipublikasi di pasaran.
 
 \begin{figure}
 	\centering
@@ -82,7 +82,14 @@ Dari berbagai teknik yang telah digunakan, penulis melakukan penggabungan 2 tekn
 DSP merupakan teknik pengolahan sinyal untuk sinyal digital.
 
 \subsection{Polimorphisme Gate}
-Polimorphisme merupakan teknik pengecoh yang di gunakan dalam perlindungan desain IC. 
+Polimorphisme Gate merupakan teknik pengecoh yang di gunakan dalam perlindungan desain IC. Sebagai contoh sebuah rangkaian dengan ouput F dan input A,B dan C akan memiliki hasil yang berbeda jika parameters k yang diberikan berbeda. Misal bila parameter k diisi dengan kombinasi 0101 maka outputnya adalah
+\begin{center}
+	F = A XOR (A \textbf{AND} B)
+\end{center}
+Sedangkan bila parameter k diisi dengan kombinasi 1101 maka outputnya menjadi
+\begin{center}
+	F = A XOR (A \textbf{NOR} B)
+\end{center}
 
 \begin{figure}
 	\centering
