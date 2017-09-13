@@ -3,6 +3,8 @@ Perancangan serta langkah-langkah di perlukan untuk menyelesaikan penelitian ini
 
 \section{Perancangan Desain}
 
+Desain utama adalah desain modul alu. Pada penelitian kali ini digunakan modul ALU dengan 2 register masing-masing 8 bit input, 4 bit opcode dan 8 bit output seperti ditunjukan pada diagram dibawah ini.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]
@@ -10,6 +12,8 @@ Perancangan serta langkah-langkah di perlukan untuk menyelesaikan penelitian ini
 	\caption{Desain ALU yang akan dilindungi}
 	\label{aludesain}
 \end{figure}
+
+Selain menggunakan desain ALU penulis juga merancang desain perlindungan dengan input 4 bit dan output 8 bit seperti yang ditunjukan diagram dibawah ini. modul inilah yang nantinya akan diselipkan pada modul ALU.
 
 \begin{figure}
 	\centering
@@ -21,6 +25,8 @@ Perancangan serta langkah-langkah di perlukan untuk menyelesaikan penelitian ini
 
 \subsection{Skema Perlindungan}
 
+Skema perlindungan ini dilakukan teknik Pengolahan Sinyal Digital untuk ekstraksi data signature dan obfuscation dengan polymorph gate untuk menyembunyikan keberadaan signature.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]
@@ -29,15 +35,7 @@ Perancangan serta langkah-langkah di perlukan untuk menyelesaikan penelitian ini
 	\label{topAsk}
 \end{figure}
 
-\todo{Jelasin polimorph}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.5\textwidth]
-	{diagrams/Activation.png}
-	\caption{Aktifasi}
-	\label{fig:aktifasi}
-\end{figure}
+Untuk teknik obfuscation dengan polymorph dilakukan desain yang bertujuan menyelipkan suatu modul lain pada modul utama tanpa diketahui pengguna. Teknik ini seperti memberikan program Trojan kedalam suatu program utama. Namun sub-program ini bukan untuk merusak namun untuk melindungi.
 
 \begin{figure}
 	\centering
@@ -53,6 +51,14 @@ Perancangan serta langkah-langkah di perlukan untuk menyelesaikan penelitian ini
 	{diagrams/topPro.png}
 	\caption{Desain rangkaian pelindung}
 	\label{topPro}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]
+	{diagrams/Activation.png}
+	\caption{Aktifasi}
+	\label{fig:aktifasi}
 \end{figure}
 
 \begin{figure}
