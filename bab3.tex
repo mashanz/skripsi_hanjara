@@ -87,10 +87,9 @@ Diagram diatas menunjukan bagaimana cara mengaktifkan modul dengan key sebagai k
 
 dibawah ini merupakan contoh listing program pada ilustrasi di atas. Sehingga terdapat 1 Top modul dan 3 sub modul pada desain chip yang telah diberikan rangkaian pelindung.
 
-\begin{lstlisting}[language=Verilog, caption=Testing Code]
+\begin{lstlisting}[language=Verilog, caption=Listing Top Modul]
 // Main Modul IC Watermark
 module alu( RST, CLK, ENA, RGA, RGB, RGZ, KEY, OPT);
-
     // Deklarasi I/O
     input  RST, CLK, ENA;
     input  [3:0]OPT;
@@ -98,52 +97,13 @@ module alu( RST, CLK, ENA, RGA, RGB, RGZ, KEY, OPT);
     input  [1:0]KEY;
     output [7:0]RGZ;
     wire   [7:0]A,B,RGZ;
-    
     // Core Inti
     alu_min aluj(RST, CLK, ENA, RGA, RGB, A, KEY, OPT);
-
     // Protektor
     protection prot(RST, CLK, ENA, RGA, RGB, B, KEY);
-
     // Bridge antara core dan protektor
     bridge jembatan(A, B, RGZ);
 endmodule
-\end{lstlisting}
-
-\begin{lstlisting}[language=Python, caption=Testing Code]
-import os
-
-top  	= "alu"
-target  = top + ".v"
-liberty = "./lib/simple.lib"
-compiled= "cmp.v"
-
-dir  	= "./module/selesai/"
-file 	= "cmp.ys"
-
-def read():
-	x=0
-	out  = open(file,"w")
-	rtl_files = os.listdir(dir)
-	
-	while(x<len(rtl_files)):
-		print(rtl_files[x])
-		out.write("read_verilog " + dir + rtl_files[x] + "\n")
-		x+=1
-	
-	out.write("hierarchy -check -top "+top+"\n")
-	out.write("proc; opt; memory; fsm; opt\n")
-	out.write("techmap; opt\n")
-	out.write("dfflibmap -liberty "+liberty+"\n")
-	out.write("abc -liberty "+liberty+"\n")
-	out.write("clean\n")
-	out.write("write_verilog -norename -noattr "+compiled+"\n")
-	out.write("show")
-	out.close()
-	os.system("yosys " + file)
-
-if __name__ == "__main__":
-	read()
 \end{lstlisting}
 
 \subsection{Spesifikasi}
@@ -213,4 +173,12 @@ Pada tahap ini di lakukan kegiatan C yaitu memproses Raw Layout menjadi Final La
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Simulasi}
-Simulasi dilakukan pada 2 environment, yaitu simulasi softwere (Timing diagram) serta simulasi hardwere (FPGA).
+Simulasi dilakukan pada 2 environment, yaitu simulasi softwere (Timming diagram) serta simulasi hardwere (FPGA). Simulasi Timming diagram menggunakan simulator multisim yang tersedia sebagai fitur dari ISE Design Suit. Fitur ini bisa digunakan dengan langsung menjalankan simulator pada Top modul dan memasukan sinyal yang akan ditest atau menggunakan kode tambahan sebagai testbench. Keuntungan menggunakan tesbench ini kita bisa mengatur skenario simulasi pada top modul dan mempermudah dalam melakukan uji perangkat bila banyak sinyal dan faktor yang perlu di uji.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]
+	{diagrams/SimulasiAlat.png}
+	\caption{Simulasi Alat}
+	\label{SimulasiAlat}
+\end{figure}
