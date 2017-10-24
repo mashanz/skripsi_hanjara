@@ -11,3 +11,5 @@
 ~$*
 Backup*
 *.pdf
+*.blg
+*.html
